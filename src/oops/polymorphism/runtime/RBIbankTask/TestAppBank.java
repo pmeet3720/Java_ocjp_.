@@ -3,6 +3,26 @@ package oops.polymorphism.runtime.RBIbankTask;
 import java.util.Scanner;
 public class TestAppBank {
 	
+	public static int getExecutedByProfile(RbiBank rbi) {
+		int roi;
+	    roi = rbi.getRoi();
+		
+		if(rbi instanceof AxisBank) {
+			AxisBank axis = (AxisBank)rbi;
+			axis.getAxisUniqueServices();
+		}else if(rbi instanceof SbiBank) {
+			SbiBank sbi = (SbiBank)rbi;
+			sbi.getSbiUniqueService();
+		}else if(rbi instanceof HdfcBank) {
+			HdfcBank hdfc = (HdfcBank)rbi;
+			hdfc.getHdfcUniqueService();
+		}else if(rbi instanceof KotakBank) {
+			KotakBank kotak = (KotakBank)rbi;
+			kotak.getKotakUniqueService();
+		}
+		return roi;
+	}
+	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("1__Axis");
@@ -19,24 +39,28 @@ public class TestAppBank {
 		
 		switch (choice) {
 		case 1:rbi = new AxisBank();
-		       roi = rbi.getRoi();
+//		       roi = rbi.getRoi();
+		       roi = getExecutedByProfile(rbi);
 			   break;
 			   
 		case 2:rbi = new SbiBank();
-	           roi = rbi.getRoi();
+//	           roi = rbi.getRoi();
+		       roi = getExecutedByProfile(rbi);
 			   break;
  
 		case 3:rbi = new KotakBank();
-	       	   roi = rbi.getRoi();
+//	       	   roi = rbi.getRoi();
+		       roi = getExecutedByProfile(rbi);
 			   break;
 		
 		case 4:rbi = new HdfcBank();
-	           roi = rbi.getRoi();
+//	           roi = rbi.getRoi();
+		       roi = getExecutedByProfile(rbi);
 			   break;
 			   
 		}
 		
-		System.out.println("Interest: "+(roi*amount)/100);
+		System.out.println("Interest rate: "+(roi)+"%");
 		
 	}
 		
