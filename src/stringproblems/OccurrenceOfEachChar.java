@@ -26,7 +26,7 @@ public class OccurrenceOfEachChar {
 	}
 	
 	public static void main(String[] args) {
-		String name = "Aakash";
+		String name = "Meet Patel";
 		String lower = name.toLowerCase();
 		char ch[] = lower.toCharArray();
 		
