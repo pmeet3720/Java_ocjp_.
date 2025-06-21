@@ -51,6 +51,7 @@ public class StudentManagementSystem {
 		Scanner sc = new Scanner(System.in);
 		
 		ArrayList<Student> list = new ArrayList<Student>();
+		Integer index = 0;
 		int choice = 0;
 		boolean flag;
 		
@@ -79,17 +80,16 @@ public class StudentManagementSystem {
 				   System.out.println("enter which student to update by rno: ");
 				   int updateRno = sc.nextInt();
 				   
-				   for(int i=0;i<list.size();i++) {
-					   s = list.get(i);
-					   if(updateRno == s.getRno()) {
-						   
-						   s.updateData();
-						   
-						   list.set(i, s);
-						   
-						   System.out.println("student record updated successfully");
-						   break;
-					   }
+				   index = getStudentIndex(list,updateRno);
+				   
+				   if(index != -1) {
+					   s = list.get(index);
+					   s.updateData();
+					   list.set(index, s);
+					   
+					   System.out.println("Student record updated successfully.");
+				   }else {
+					   System.out.println("Student record not found in database.");
 				   }
 				   
 				   break;
@@ -97,7 +97,7 @@ public class StudentManagementSystem {
 			case 3:
 				   System.out.println("enter Rno to delete: ");
 				   int searchRno = sc.nextInt();
-				   Integer index = getStudentIndex(list,searchRno);
+				   index = getStudentIndex(list,searchRno);
 				   
 				   if(index != null) {
 					   list.remove(index);
@@ -124,23 +124,18 @@ public class StudentManagementSystem {
 				   System.out.println("enter Name to search student: ");
 				   sc.nextLine();
 				   String searchName = sc.nextLine();
-				   flag = true;
-				   for(int i=0;i<list.size();i++) {
-					   s = list.get(i);
-					   if(s.getName().equalsIgnoreCase(searchName)) {
-						   flag = false;
-						   System.out.println("student found!");
-						   s.dispData();
-						   break;
-					   }
+				   s = getStudentRecordByName(list,searchName);
+				   
+				   if(s != null) {
+					   System.out.println("Student record found!");
+					   s.dispData();
+				   }else {
+					   System.out.println("Student record not found in database.");
 				   }
-				   if(flag) {
-					   System.out.println("student record not found in database.");
-				   }    
 				   break;
 				   
 			case 6:
-				   System.out.println("Rno    Name    Std");
+				   System.out.println("Rno  Name  Std");
 				   for(int i=0;i<list.size();i++) {
 					   s = list.get(i);
 					   s.dispData();
@@ -157,9 +152,8 @@ public class StudentManagementSystem {
 				   }
 				   break;
 	
-			
 			}
-		}while(choice != 6);
+		}while(choice != 7);
 		
 		
 	}

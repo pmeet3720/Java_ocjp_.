@@ -53,11 +53,11 @@ public class Student {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("enter name: ");
 		name = sc.nextLine();
-		this.setName(name);
+//		this.setName(name);
 		
 		System.out.println("enter std: ");
 		std = sc.nextInt();
-		this.setStd(std);
+//		this.setStd(std);
 	}
 	
 	
