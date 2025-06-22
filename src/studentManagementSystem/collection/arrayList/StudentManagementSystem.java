@@ -151,7 +151,7 @@ public class StudentManagementSystem {
 						e.printStackTrace();
 				   }
 				   break;
-	
+				   
 			}
 		}while(choice != 7);
 		
