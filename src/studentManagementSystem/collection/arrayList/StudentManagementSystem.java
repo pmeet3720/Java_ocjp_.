@@ -158,15 +158,6 @@ public class StudentManagementSystem {
 		
 	}
 	
-	/*
-	 *  Each product has:
-		Product ID (int)
-		Name (String)
-		Category (String)
-		Price (double)
-		Quantity (int)
-	 * 
-	 * 
-	 */
+	
 
 }
