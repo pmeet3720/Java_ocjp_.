@@ -1,4 +1,4 @@
-package collectionFramework.Vector;
+package collectionFramework.vector;
 
 import java.util.Iterator;
 import java.util.Vector;

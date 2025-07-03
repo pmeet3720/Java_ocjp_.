@@ -1,4 +1,4 @@
-package oops.inhtopic.hirarchical.BankAccountSystem;
+package oops.inhtopic.hirarchical.bankAccountSystem;
 
 public class SavingsAccount extends BankAccount {
 	

@@ -1,4 +1,4 @@
-package collectionFramework.ArrayList;
+package collectionFramework.arrayList;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -6,11 +6,11 @@ import java.util.Iterator;
 public class ArrayListDemo3 {
 	
 	public static void main(String[] args) {
-		Student s1 = new Student(101,"Kabir",12);
-		Student s2 = new Student(102,"Sagar",12);
-		Student s3 = new Student(103,"Kohli",12);
-		Student s4 = new Student(104,"Mahesh",12);
-		Student s5 = new Student(105,"Neha",12);
+		Student s1 = new Student(101,"Kabir",12,90);
+		Student s2 = new Student(102,"Sagar",12,45);
+		Student s3 = new Student(103,"Kohli",12,78);
+		Student s4 = new Student(104,"Mahesh",12,89);
+		Student s5 = new Student(105,"Neha",12,100);
 		
 		ArrayList<Student> list = new ArrayList<Student>();
 		

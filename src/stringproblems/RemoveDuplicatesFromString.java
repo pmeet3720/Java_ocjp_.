@@ -18,7 +18,6 @@ public class RemoveDuplicatesFromString {
 		String lower = str.toString().toLowerCase();
 		char[] ch = lower.toCharArray();
 		StringBuilder str1 = new StringBuilder(lower);
-		
 		int i=0;
 		for(char c:ch) {
 			int cnt = countCharOccur(c,str1);

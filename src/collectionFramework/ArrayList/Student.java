@@ -1,20 +1,22 @@
-package collectionFramework.ArrayList;
+package collectionFramework.arrayList;
 
-public class Student {
+public class Student  {
 	
 	private int rno;
 	private String name;
 	private int std;
+	private int marks;
 	
 	public Student() {
 		
 	}
 
-	public Student(int rno, String name, int std) {
+	public Student(int rno, String name, int std, int marks) {
 		super();
 		this.rno = rno;
 		this.name = name;
 		this.std = std;
+		this.marks = marks;
 	}
 
 	public int getRno() {

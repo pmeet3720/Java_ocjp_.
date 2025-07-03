@@ -1,4 +1,4 @@
-package collectionFramework.ArrayList;
+package collectionFramework.arrayList;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -19,7 +19,7 @@ public class ArrayListDemo1 {
 		List.add("Meet"); //String---5---[String]
 		List.add('K');//char---6---[Character--object]
 		
-		Student s = new Student(101,"Kabir",12);
+		Student s = new Student(101,"Kabir",12,90);
 		
 		List.add(s);
 		

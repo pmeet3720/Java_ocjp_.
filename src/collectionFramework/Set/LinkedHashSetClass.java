@@ -1,4 +1,4 @@
-package collectionFramework.Set;
+package collectionFramework.set;
 
 import java.util.Iterator;
 import java.util.LinkedHashSet;

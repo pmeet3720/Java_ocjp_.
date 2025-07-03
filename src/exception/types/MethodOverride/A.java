@@ -1,4 +1,4 @@
-package exception.types.MethodOverride;
+package exception.types.methodOverride;
 
 public class A {
 	
