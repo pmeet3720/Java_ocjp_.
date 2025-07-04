@@ -1,5 +1,7 @@
 package jdbctopic.bean;
 
+import java.util.Scanner;
+
 public class StudentBean {
 	
 	private int rno,std,marks;
@@ -47,6 +49,18 @@ public class StudentBean {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public void scanData() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter name: ");
+		name = sc.nextLine();
+		
+		System.out.println("enter std: ");
+		std = sc.nextInt();
+		
+		System.out.println("enter marks: ");
+		marks = sc.nextInt();
 	}
 	
 	
