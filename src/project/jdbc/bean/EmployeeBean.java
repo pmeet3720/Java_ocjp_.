@@ -63,6 +63,7 @@ public class EmployeeBean {
 		this.salary = salary;
 	}
 	
+	
 	public void scanEmpData() {
 		Scanner sc = new Scanner(System.in);
 		

@@ -72,7 +72,7 @@ public class StudentDaoPrep {
 	
 	public int updateStudent(StudentBean s, int rno) {
 		
-		String updateQuery = "update student set name = ?, std = ?, marks = ?";
+		String updateQuery = "update student set name = ?, std = ?, marks = ? where rno = ?";
 		
 		Connection conn = DBconnection.getConnection();
 		
@@ -83,10 +83,10 @@ public class StudentDaoPrep {
 			try {
 				pstmt = conn.prepareStatement(updateQuery);
 				
-				pstmt.setInt(1, rno);
-				pstmt.setString(2, s.getName());
-				pstmt.setInt(3, s.getStd());
-				pstmt.setInt(4, s.getMarks());
+				pstmt.setString(1, s.getName());
+				pstmt.setInt(2, s.getStd());
+				pstmt.setInt(3, s.getMarks());
+				pstmt.setInt(4, rno);
 				
 				rowAffected = pstmt.executeUpdate();
 				
