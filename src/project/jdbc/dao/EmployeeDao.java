@@ -127,6 +127,36 @@ public class EmployeeDao {
 		return null;
 	}
 	
+	public static EmployeeBean getEmployeeByEmpName(String empName) {
+		String searchQuery = "select * from employee where name = ?";
+		
+		Connection conn = DBConnection.getConnection();
+		
+		EmployeeBean emp = null;
+		
+		PreparedStatement pstmt = null;
+		
+		ResultSet rs = null;
+		
+		if(conn!=null) {
+			try {
+				pstmt = conn.prepareStatement(searchQuery);
+				
+				pstmt.setString(1, empName);
+				
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					emp = new EmployeeBean(rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getDouble(5));
+				}
+				return emp;
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return null;
+	}
+	
 	public static ArrayList<EmployeeBean> getEmployeeRecords() {
 		ArrayList<EmployeeBean> list = new ArrayList<EmployeeBean>();
 		

@@ -9,7 +9,7 @@ public class CompanyManagement {
 				new Project(102,"Web development"),
 		};
 		
-		Employee.companyName = "Google";
+		Employee.setCompanyName("Infosys");
 		
 		Employee e = new Employee(1,"Meet",project1);
 		e.displayEmployeeDetails();

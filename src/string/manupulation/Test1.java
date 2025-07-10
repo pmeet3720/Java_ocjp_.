@@ -1,5 +1,7 @@
 package string.manupulation;
 
+import java.lang.reflect.Array;
+
 public class Test1 {
 	
 	public static void main(String[] args) {
@@ -10,9 +12,11 @@ public class Test1 {
 		String name2 = "meet";
 		String name3 = "patel";
 		String name4 = name1;
+//		name3.substring(0)
 		
 		String name5 = name1.concat(name3);
 		name3 = "kabir";
+//		name5.re
 		
 		//object equality
 		//1. == (reference based)
@@ -26,6 +30,8 @@ public class Test1 {
 		System.out.println(name1.equals(name2));
 		System.out.println(name1.equals(name3));
 		System.out.println(name1.equals(name4));
+//		Array
+//		Byte
 	}
 
 }

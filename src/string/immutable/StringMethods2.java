@@ -26,6 +26,10 @@ public class StringMethods2 {
 		
 		int no1 = Integer.parseInt(strno1);
 		int no2 = Integer.parseInt(strno2);
+		
+		Integer i = new Integer(257);
+		byte x = i.byteValue();
+		System.out.print(x);
 	}
 
 }

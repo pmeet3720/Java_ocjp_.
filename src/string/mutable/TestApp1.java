@@ -20,6 +20,7 @@ public class TestApp1 {
 //		
 //		System.out.println("sb1: "+sb1.hashCode());
 //		System.out.println("sb3: "+sb3.hashCode());
+//		Float a = 12.23
 
 	}
 

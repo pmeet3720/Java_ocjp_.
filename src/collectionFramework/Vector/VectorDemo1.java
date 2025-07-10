@@ -16,9 +16,11 @@ public class VectorDemo1 {
 		list.add("Shruti");
 		list.add("Ganesh");
 		
+		list.insertElementAt("Kishor", 1);
+		list.removeElementAt(1);
+		
 		System.out.println("List.size(): "+list.size());
 
-		
 		Iterator<String> itr = list.iterator();
 		
 		while(itr.hasNext()) {

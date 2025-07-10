@@ -21,7 +21,7 @@ public class EmployeeRecordManagementSystem {
 			System.out.println("1) Insert employee");
 			System.out.println("2) Delete employee by emp_id");
 			System.out.println("3) Update employee by emp_id");
-			System.out.println("4) Search employee by emp_id");
+			System.out.println("4) Search employee");
 			System.out.println("5) Display employee data");
 			System.out.println("6) Exit");
 			
@@ -84,15 +84,42 @@ public class EmployeeRecordManagementSystem {
 					break;
 				
 			case 4:
-					System.out.println("Enter empID to search for empolyee: ");
-					emp_id = sc.nextInt();
+					int searchchoice= 0;
+					System.out.println("1) By EmpID");
+					System.out.println("2) By EmpName");
+					System.out.println("enter choice: ");
+					searchchoice = sc.nextInt();
 					
-					emp = EmployeeDao.getEmployeeByEmpID(emp_id);
-				
-					if(emp != null) {
-						System.out.println(emp.getEmp_id()+" "+emp.getName()+" "+emp.getDepartment()+" "+emp.getDesignation()+" "+emp.getSalary());
-					}else {
-						System.out.println("Employee not found in records.");
+					switch (searchchoice) {
+					case 1:
+							System.out.println("enter empId to search for employee: ");
+							emp_id = sc.nextInt();
+							
+							emp = EmployeeDao.getEmployeeByEmpID(emp_id);
+							
+							if(emp != null) {
+								System.out.println(emp.getEmp_id()+" "+emp.getName()+" "+emp.getDepartment()+" "+emp.getDesignation()+" "+emp.getSalary());
+							}else {
+								System.out.println("Employee record not found.");
+							}
+							break;
+							
+					case 2:
+							sc.nextLine();
+							System.out.println("enter empName to search for employee: ");
+							name = sc.nextLine();
+							
+							emp = EmployeeDao.getEmployeeByEmpName(name);
+							
+							if(emp != null) {
+								System.out.println(emp.getEmp_id()+" "+emp.getName()+" "+emp.getDepartment()+" "+emp.getDesignation()+" "+emp.getSalary());
+							}else {
+								System.out.println("Employee record not found.");
+							}
+							break;
+
+					default:
+						break;
 					}
 					break;
 				

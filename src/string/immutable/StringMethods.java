@@ -22,6 +22,8 @@ public class StringMethods {
 		System.out.println(str.substring(6));
 		System.out.println(str.substring(6, 16));
 		
+		StringBuffer s1 = new StringBuffer("Quiz"); StringBuffer s2 = s1.reverse(); 
+		System.out.println(s2);
 		
 		
 		String str1 = " ";
